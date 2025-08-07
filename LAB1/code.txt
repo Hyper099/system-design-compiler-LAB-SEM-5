@@ -1,0 +1,11 @@
+int main(){
+    float _aa=2.56;//Single line
+    /*multy
+    line*/char k='p';
+    int b=23;
+    b+=_aa;
+    if(b==25){
+        printf("Party");
+    }
+    return 0;
+}
