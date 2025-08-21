@@ -1,0 +1,3 @@
+3(a) Write a LEX program to eliminate comment lines (single line and multiline) in a high-level program and copy the comments in comments.txt file and copy the resulting program into a separate file input.c.
+3(b) Write a LEX program to count the number of characters, words and lines in the given input.
+3(c) Write a LEX program to identify HTML tags/SQL tags.
