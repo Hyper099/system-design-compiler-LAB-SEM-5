@@ -322,9 +322,6 @@ void yyfree ( void *  );
 #define YY_AT_BOL() (YY_CURRENT_BUFFER_LVALUE->yy_at_bol)
 
 /* Begin user sect3 */
-
-#define yywrap() (/*CONSTCOND*/1)
-#define YY_SKIP_YYWRAP
 typedef flex_uint8_t YY_CHAR;
 
 FILE *yyin = NULL, *yyout = NULL;
@@ -487,11 +484,11 @@ int yy_flex_debug = 0;
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
 #line 1 "second.l"
-#line 4 "second.l"
+#line 3 "second.l"
     #include <stdio.h>
     int count = 0;
-#line 493 "lex.yy.c"
-#line 494 "lex.yy.c"
+#line 490 "lex.yy.c"
+#line 491 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -708,9 +705,9 @@ YY_DECL
 		}
 
 	{
-#line 18 "second.l"
+#line 17 "second.l"
 
-#line 713 "lex.yy.c"
+#line 710 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -769,61 +766,61 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 19 "second.l"
+#line 18 "second.l"
 { printf("%s is a keyword\n", yytext);                       count++; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 20 "second.l"
+#line 19 "second.l"
 { printf("%s is an identifier token\n", yytext);             count++; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 21 "second.l"
+#line 20 "second.l"
 { printf("%s is a number token\n", yytext);                  count++; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 22 "second.l"
+#line 21 "second.l"
 { printf("%s is an arithmetic operator token\n", yytext);    count++; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 23 "second.l"
+#line 22 "second.l"
 { printf("%s is a relational operator token\n", yytext);     count++; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 24 "second.l"
+#line 23 "second.l"
 { printf("%s is a logical operator token\n", yytext);        count++; }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 25 "second.l"
+#line 24 "second.l"
 { printf("%s is an assignment operator token\n", yytext);    count++; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 26 "second.l"
+#line 25 "second.l"
 { printf("%s is a bitwise operator token\n", yytext);        count++; }
 	YY_BREAK
 case 9:
 /* rule 9 can match eol */
 YY_RULE_SETUP
-#line 28 "second.l"
+#line 27 "second.l"
 { }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 29 "second.l"
+#line 28 "second.l"
 { printf("%s is an unknown token\n", yytext); }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 30 "second.l"
+#line 29 "second.l"
 ECHO;
 	YY_BREAK
-#line 826 "lex.yy.c"
+#line 823 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1828,7 +1825,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 30 "second.l"
+#line 29 "second.l"
 
 
 int main() {
@@ -1836,4 +1833,8 @@ int main() {
     yylex();
     printf("Total no. of tokens are: %d\n", count);
     return 0;
+}
+
+int yywrap(){
+    return 1;
 }

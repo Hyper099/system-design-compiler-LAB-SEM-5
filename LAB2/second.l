@@ -1,5 +1,3 @@
-%option noyywrap
-
 %{
     #include <stdio.h>
     int count = 0;
@@ -34,4 +32,8 @@ int main() {
     yylex();
     printf("Total no. of tokens are: %d\n", count);
     return 0;
+}
+
+int yywrap(){
+    return 1;
 }

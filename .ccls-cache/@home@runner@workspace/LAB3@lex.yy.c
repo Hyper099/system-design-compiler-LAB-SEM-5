@@ -761,7 +761,7 @@ YY_RULE_SETUP
 case 5:
 YY_RULE_SETUP
 #line 19 "second.l"
-{ normal_words++; printf("Normal word: %s\n", yytext);              }
+{ normal_words++; printf("Normal word: %s\n", yytext);       }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP

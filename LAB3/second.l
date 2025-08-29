@@ -16,7 +16,7 @@
 "//"                                   { BEGIN(SINGLECOMMENT); }
 <SINGLECOMMENT>"\n"                    { BEGIN(INITIAL); }
 
-[a-zA-Z]+                              { normal_words++; printf("Normal word: %s\n", yytext);       }
+[a-zA-Z]+                              { normal_words++; printf("Normal word: %s\n", yytext);              }
 <COMMENT>[a-zA-Z0-9]+                  { double_comment_words++; printf("Comment Word: %s\n", yytext);     }
 <SINGLECOMMENT>[a-zA-Z0-9]+            { single_comment_words++; printf("Comment Word: %s\n", yytext);     }
 
